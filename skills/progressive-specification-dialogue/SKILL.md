@@ -43,6 +43,28 @@ Turn a broad idea into a clear epic specification without forcing premature impl
 - Readiness: before setting the epic status to `ready` or the ledger phase to `DONE`, obtain explicit user confirmation.
 - Implementation: writes under `.spexus/` are specification work, not product implementation. Do not modify product code, configuration, infrastructure, or data unless the user starts a separate implementation task.
 
+## Communication and Artifact Language Contract
+
+Assume the user may have no software-development, product-management, or requirements-engineering background.
+
+- Start in plain language. Discuss the goal, people, steps, visible behavior, constraints, failures, and signs of success before introducing technical structure.
+- Do not ask the user to formulate EARS requirements, Gherkin scenarios, APIs, schemas, architecture, or other formal artifacts. Translate the user's intent into the required technical form yourself.
+- Avoid internal labels and specialist terms such as `epic`, `user story`, `requirement`, `acceptance criterion`, `EARS`, `INCOSE`, `Gherkin`, `DTO`, or `persistence` unless the user asks for technical structure or the term is necessary to make a decision.
+- When a specialist term is necessary, explain it in one short plain-language sentence before using it.
+- Ask one substantive question at a time. Briefly explain why the answer matters in terms of user-visible behavior or a concrete downstream consequence.
+- Reflect the current understanding before asking the next question so the user can correct it without learning the internal document model.
+- Match detail to the user's signals: begin simply, then add technical depth when the user asks for it or when omitting it would hide a material tradeoff.
+- When the user asks what a question means or requests more detail, answer in layers: first restate it in plain language, then give a concrete example or short options, then explain the relevant technical context and consequences. End by repeating one actionable question. Do not merely repeat the original wording.
+
+Treat the conversation and the saved documents as two representations of the same intent:
+
+- Keep the dialogue accessible, but write `epic.md`, `decision-log.md`, and steering documents with precise, technically competent wording in the user's language.
+- Normalize informal or ambiguous user wording into explicit actors, triggers, states, inputs, outputs, failures, thresholds, and observable results where relevant.
+- Apply the required EARS, INCOSE, and Gherkin rules without requiring the user to know those standards.
+- Do not copy vague conversational wording into a requirement or acceptance criterion when it can be made testable.
+- Do not invent a technical decision while normalizing the text. Record any material inference as provisional in `decision-log.md` and confirm it through the dialogue.
+- Preserve traceability from the user's goal through user stories, requirements, acceptance criteria, and recorded decisions.
+
 ## Required References
 
 Read [references/storage-model.md](references/storage-model.md) completely before locating, creating, or writing an epic.
