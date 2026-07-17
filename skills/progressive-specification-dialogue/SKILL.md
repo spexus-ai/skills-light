@@ -47,6 +47,8 @@ Turn a broad idea into a clear epic specification without forcing premature impl
 
 Read [references/storage-model.md](references/storage-model.md) completely before locating, creating, or writing an epic.
 
+Read [references/specification-formats.md](references/specification-formats.md) completely before drafting or changing user stories, requirements, or acceptance criteria.
+
 Read [references/review-and-readiness.md](references/review-and-readiness.md) completely before completeness review, reentry review, scope deep dive, or finalization.
 
 ## Storage Gate
@@ -142,19 +144,30 @@ Clarify what should change for a user, organization, or system. Record the curre
 
 Clarify who acts, what starts the flow, the main sequence, meaningful variants, and the visible outcome. Represent each stable user job as a numbered section inside `epic.md`:
 
-```markdown
+````markdown
 ### US-001 — Short title
 
 As a ..., I want ..., so that ...
 
 #### Requirements
-...
+
+##### US-001-REQ-001 — Testable behavior
+WHEN ..., THE system SHALL ...
 
 #### Acceptance Criteria
-...
-```
 
-Keep requirements and acceptance criteria inside the corresponding user-story section. Do not create user-story directories or separate files.
+##### US-001-AC-001 — Observable scenario
+Verifies: US-001-REQ-001
+
+```gherkin
+Scenario: ...
+  Given ...
+  When ...
+  Then ...
+```
+````
+
+Keep requirements and acceptance criteria inside the corresponding user-story section. Apply [references/specification-formats.md](references/specification-formats.md): use EARS and INCOSE quality rules for requirements, Gherkin for acceptance criteria, and the user's language for every title, statement, and Gherkin keyword. Do not create user-story directories or separate files.
 
 ### 3. Shape System Behavior
 

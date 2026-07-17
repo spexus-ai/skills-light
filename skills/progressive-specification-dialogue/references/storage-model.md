@@ -44,7 +44,7 @@ Do not create session directories, global state files, indexes, user-story direc
 
 Use `epic.md` as the single evolving specification:
 
-```markdown
+````markdown
 <!-- PROGRESSIVE_SPEC_EPIC v1 -->
 # Epic Title
 
@@ -71,11 +71,18 @@ As a ..., I want ..., so that ...
 
 #### Requirements
 ##### REQ-001 — Short title
-...
+WHEN ..., THE system SHALL ...
 
 #### Acceptance Criteria
 ##### AC-001 — Short title
-...
+Verifies: REQ-001
+
+```gherkin
+Scenario: ...
+  Given ...
+  When ...
+  Then ...
+```
 
 ## Constraints And Important Rules
 ...
@@ -97,9 +104,9 @@ As a ..., I want ..., so that ...
 
 ## Open Questions
 ...
-```
+````
 
-Keep user-story, requirement, and acceptance identifiers stable after creation. Scope requirement and acceptance identifiers within their user story when ambiguity is possible, for example `US-001-REQ-001`.
+Keep user-story, requirement, and acceptance identifiers stable after creation. Scope requirement and acceptance identifiers within their user story, for example `US-001-REQ-001` and `US-001-AC-001`. Treat this English block as a structural example only: render user stories, EARS requirements, Gherkin scenarios, headings, and keywords in the user's language according to [specification-formats.md](specification-formats.md).
 
 ## Decision Ledger
 

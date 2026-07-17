@@ -34,6 +34,9 @@ Do not keep questioning an area that meets its target. If the user requests an e
 
 For every implementation-relevant user story or workflow slice, record:
 
+- user-story format compliance in the user's language;
+- EARS pattern and INCOSE quality compliance for every requirement;
+- localized Gherkin syntax and requirement traceability for every acceptance criterion;
 - testability: `clear`, `partial`, or `blocked`;
 - affected components and ownership;
 - API, persistence, data, and integration contracts;
@@ -95,6 +98,7 @@ If the epic remains complete, offer either no change or one focused scope deep d
 |---|---|
 | New vague goal | Ask one goal question before creating an unhelpfully named epic. |
 | New nameable goal | Create a dated epic directory with only two files. |
+| User stories are drafted | Use the user's language, EARS/INCOSE requirements, and localized Gherkin acceptance criteria. |
 | Existing matching epic | Resume from `decision-log.md`. |
 | Multiple matching epics | Ask the user to select one. |
 | Completed epic | Run reentry review before reaffirming completion. |
