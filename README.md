@@ -1,11 +1,12 @@
 # Skills Light
 
-Lightweight Codex skills that work with local files and do not require MCP services.
+Lightweight Agent Skills for Codex, Claude Code, OpenCode, and other compatible agents. The skills work with local files and do not require MCP services.
 
 ## Repository layout
 
 ```text
 skills-light/
+├── INSTALL.md
 ├── skills/
 │   └── <skill-name>/
 │       ├── SKILL.md
@@ -26,28 +27,20 @@ Each skill is self-contained under `skills/<skill-name>/`. Add future skills as 
 
 ## Installation
 
-Clone the repository:
+Clone the repository, then ask Codex, Claude Code, OpenCode, or another compatible agent to follow the interactive installer instructions:
 
 ```bash
 git clone git@github.com:spexus-ai/skills-light.git
 ```
 
-Expose an individual skill to a project with a symbolic link:
-
-```bash
-mkdir -p /path/to/project/.codex/skills
-ln -s /path/to/skills-light/skills/progressive-specification-dialogue \
-  /path/to/project/.codex/skills/progressive-specification-dialogue
-```
-
-The repository remains the canonical source while the project-local link makes the skill discoverable by Codex.
+See [INSTALL.md](INSTALL.md). The agent will analyze all available skills, explain them, ask which ones to install, choose the correct destination for the active agent, and verify the result. It must not install or overwrite skills before receiving the user's selection and any required conflict approval.
 
 ## Adding a skill
 
 1. Create `skills/<skill-name>/SKILL.md` with valid `name` and `description` frontmatter.
 2. Add only the resources the skill needs, typically `agents/`, `references/`, or `scripts/`.
 3. Keep runtime artifacts outside this repository and document their target location in the skill.
-4. Validate the skill with Codex's `skill-creator` validation script.
+4. Validate the directory name and `SKILL.md` frontmatter against the Agent Skills format. When Codex is available, also run the `skill-creator` validation script.
 5. Add the skill to the table above.
 
 ## License
