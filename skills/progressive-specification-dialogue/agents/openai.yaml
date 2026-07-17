@@ -1,0 +1,6 @@
+interface:
+  display_name: "Progressive Specification Dialogue"
+  short_description: "Shape specifications through guided dialogue."
+  default_prompt: "Use $progressive-specification-dialogue to shape a clear epic, keep its ledger under ./.spexus/epics/, and capture approved project-wide technical decisions under ./.spexus/steering/."
+policy:
+  allow_implicit_invocation: true
