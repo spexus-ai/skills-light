@@ -13,7 +13,6 @@ Turn a broad idea into a clear epic specification without forcing premature impl
 - Ask at most one substantive question per user turn.
 - Use the user's language. Infer it from the current request and recent dialogue; default to English only when no signal exists.
 - Use plain user-facing language: goal, users, steps, behavior, constraints, signs of success, risks, and technical notes.
-- Use no MCP server, connector, remote API, external issue tracker, or network service.
 - Treat the invocation directory as the fixed project root. Do not search parent directories for a different root.
 - Store every runtime artifact exclusively under `<project-root>/.spexus/`.
 - Use only this runtime layout:
