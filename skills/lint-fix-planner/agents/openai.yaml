@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lint Fix Planner"
+  short_description: "Triage lint reports and plan safe fixes"
+  default_prompt: "Use $lint-fix-planner to triage this repository’s linter report and propose safe next steps."
