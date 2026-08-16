@@ -24,6 +24,7 @@ Each skill is self-contained under `skills/<skill-name>/`. Add future skills as 
 | Skill | Description |
 |---|---|
 | [`progressive-specification-dialogue`](skills/progressive-specification-dialogue/) | Shapes a clear epic through progressive dialogue, local Markdown artifacts, and independent reviews. Stores runtime documents under the target project's `.spexus/` directory. |
+| [`progressive-system-design-dialogue`](skills/progressive-system-design-dialogue/) | Designs and verifies architecture changes through local evidence ledgers, Graphify C4 projections, before/after diffs, and interactive UI. Does not require Spexus MCP. |
 | [`lint-fix-planner`](skills/lint-fix-planner/) | Runs and triages linter reports, applies safe fixes, and prepares risk-aware remediation plans. |
 
 ## Installation

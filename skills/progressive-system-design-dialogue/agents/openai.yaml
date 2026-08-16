@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive System Design Dialogue"
+  short_description: "Design and verify architecture with C4 evidence."
+  default_prompt: "Use $progressive-system-design-dialogue to design an architecture change, maintain a local evidence ledger, and inspect its Graphify C4 UI."
